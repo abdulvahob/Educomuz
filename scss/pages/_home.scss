@@ -1,0 +1,98 @@
+
+.home {
+    &-plans {
+  
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 30px;
+      }
+  
+      &__item {
+        position: relative;
+        padding: 15px;
+        max-width: calc(33.33% - 20px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+        overflow: hidden;
+        transition: all .3s linear;
+        border-radius: 30px;
+        img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          object-position: center bottom;
+          margin-bottom: 15px;
+        }
+  
+        span {
+          font-size: 17.5px;
+          line-height: 20px;
+          font-weight: 700;
+          color: #fff;
+        }
+  
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          left: 0;
+          top: 0;
+          width: 200%;
+          height: 100%;
+          transition: all .3s linear;
+        }
+  
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 5px 10px rgba(#fff, .25);
+        }
+  
+        &:hover::before {
+          left: -100%;
+
+        }
+  
+        &:nth-child(1)::before {
+          background: linear-gradient(to right, #FF9500, #FFBA00);
+        }
+  
+        &:nth-child(2)::before {
+          background: linear-gradient(to right, #090979, #00d4ff);
+        }
+        
+        &:nth-child(3)::before {
+          background: linear-gradient(to right, #44ab34, #00ff19);
+        }
+        
+        &:nth-child(4)::before {
+          background: linear-gradient(to right, #692020, #ff0000);
+        }
+        
+        &:nth-child(5)::before {
+          background: linear-gradient(to right, #581a56, #ff00ec);
+        }
+        
+        &:nth-child(6)::before {
+          background: linear-gradient(to right, #44581a, #acff00);
+        }
+  
+  
+      }
+    }
+  
+    &-banner {
+      .container {
+        display: block;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }

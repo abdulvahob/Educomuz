@@ -1,0 +1,74 @@
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0 none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: #444;
+    font-family: "Helvetica Neue",Helvetica, Arial,sans-serif;
+    line-height: 24px;
+    // background: radial-gradient(#0B0B30, #1D257D,  #1D134D);
+    background: #0B0a30;
+    min-height: 100vh;
+    color: rgba(255,255,255,0.6);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    transition: all .3s linear;
+    &:hover {
+        text-decoration: none;
+        color: rgba(255,255,255,1);
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerBlock {
+    display: block;
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.btn-orange {
+    text-transform: lowercase;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    background: $orange;
+    color: #fff;
+    transition: all .3s linear!important;
+    
+    &:hover {
+        color: #fff;
+        background: darken($orange, 1%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px -5px rgba(#000, .1);
+    }
+    
+    &:active,
+    &:focus {
+        background: darken($orange, 5%);
+    }
+
+
+}

@@ -1,0 +1,69 @@
+.registration {
+
+  &__inner {
+    padding: 15px;
+    &-title {
+      font-size: 24px;
+      line-height: 1.5;
+      background: #6e05d4;
+      border-radius: 4px;
+      padding: 5px;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 30px;
+      color: #fff;
+      .red-star {
+        color: red;
+      }
+    }
+    label {
+      color: #fff;
+    }
+
+    .registration-tel-form {
+        margin-bottom: 30px;
+        label {
+            margin-top: 10px;
+            text-align: right;
+            font-size: 16px;
+            line-height: 20px;
+            color: #fff;
+        }
+        input[type='checkbox'] {
+          width: 36px;
+          height: 36px;
+          border-radius: 3px;
+
+        }
+        // .btn {
+        //     background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+        // }
+    }
+    .registration-email-form {
+
+      &__link {
+        color: red;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .red-star {
+          color: red!important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.lessons {
+    padding-top: 50px;
+    // background: red;
+
+    // &__wrapper {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    // }
+
+    &__item {
+        border-radius: 30px;
+        margin-bottom: 10px;
+        padding: 5px 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .badge {
+            vertical-align: top;
+            margin-left: 5px;
+        }
+        
+        a {
+            position: relative;
+            font-family: georgia, Arial, sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 1.2;
+            transition: all .3s linear;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: 0;
+            //     width: 0%;
+            //     height: 1px;
+            //     opacity: 0;
+            //     background: #00466f;
+            //     transition: all .3s linear;
+            // }
+
+            &:hover {
+                text-decoration: underline;
+                // &::before {
+                //     width: 100%;
+                //     opacity: 1;
+                // }
+            }
+
+
+        }
+
+        
+        // $bgColorArray: (#0d6efd, #6c757d, #28a745, #dc3545, #ffc107, #17a2b8, #f8f9fa, #343a40);
+        // $textColorArray: (#fff, #fff, #fff, #fff, #000, #000, #000, #fff);
+
+
+        // @for $i from 1 through 8 {
+        //     &:nth-child(#{$i}n) {
+        //         background: linear-gradient(to top, darken($bgColorArray[ $i ], 20%), $bgColorArray#{$i}, lighten($bgColorArray#{$i}, 20%));
+        //         a {
+        //             color: rgba($textColorArray#{$i}, .8);
+        //             &:hover {
+        //                 color: rgba($textColorArray#{$i}, 1);
+        //             }
+        //         }
+        //     }
+        // }
+
+        &:nth-child(1n) {
+            background: linear-gradient(to top, darken(#0d6efd, 20%), #0d6efd, lighten(#0d6efd, 20%));
+            a {
+                color: rgba(#fff, .8);
+                &:hover {
+                    color: rgba(#fff, 1);
+                }
+            }
+
+        }
+        &:nth-child(2n) {
+            background: linear-gradient(to top, darken(#6c757d, 20%), #6c757d, lighten(#6c757d, 20%));
+            a {
+                color: rgba(#fff, .8);
+                &:hover {
+                    color: rgba(#fff, 1);
+                }
+            }
+        }
+        &:nth-child(3n) {
+            background: linear-gradient(to top, darken(#28a745, 20%), #28a745, lighten(#28a745, 20%));        
+            a {
+                color: rgba(#fff, .8);
+                &:hover {
+                    color: rgba(#fff, 1);
+                }
+            }
+        }
+        &:nth-child(4n) {
+            background: linear-gradient(to top, darken(#28a745, 20%), #28a745, lighten(#28a745, 20%));        
+            background:#dc3545 ;
+            a {
+                color: rgba(#fff, .8);
+                &:hover {
+                    color: rgba(#fff, 1);
+                }
+            }
+        }
+        &:nth-child(5n) {
+            background: linear-gradient(to top, darken(#ffc107, 20%), #ffc107, lighten(#ffc107, 20%));        
+            a {
+                color: rgba(#000, .8);
+                &:hover {
+                    color: rgba(#000, 1);
+                }
+            }
+}
+        &:nth-child(6n) {
+            background: linear-gradient(to top, darken(#17a2b8, 20%), #17a2b8, lighten(#17a2b8, 20%));        
+            a {
+                color: rgba(#000, .8);
+                &:hover {
+                    color: rgba(#000, 1);
+                }
+            }
+        }
+        &:nth-child(7n) {
+            background: linear-gradient(to top, darken(#f8f9fa, 20%), #f8f9fa, lighten(#f8f9fa, 20%));        
+            a {
+                color: rgba(#000, .8);
+                &:hover {
+                    color: rgba(#000, 1);
+                }
+            }
+        }
+        &:nth-child(8n) {
+            background: linear-gradient(to top, darken(#343a40, 20%), #343a40, lighten(#343a40, 20%));        
+            a {
+                color: rgba(#fff, .8);
+                &:hover {
+                    color: rgba(#fff, 1);
+                }
+            }
+        }
+    }
+
+    &-views {
+        thead {
+            a {
+                display: inline-block;
+                overflow: visible;
+                position: relative;
+                color: #0066a2;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+
+                &:hover::after,
+                &:hover::before {
+                    display: block;
+                }
+
+                &::after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    left: 20px;
+                    bottom: 30px;
+                    border: 5px solid transparent;
+                    border-top-color: rgba(#fff, .8);
+                }
+
+                &::before {
+                    display: none;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    font-weight: 100;
+                    content: attr(data-content);
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0;
+                    width: 200px;
+                    padding: 10px;
+                    background: rgba(#fff, .8);
+                    color: #000;
+                }
+            }
+        }
+        tr {
+            td {
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &:nth-child(2n) {
+                background: rgba(#dee2e6, .1);
+            }
+        }
+    }
+}
